@@ -1,10 +1,20 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f1f2f6;
+  padding-top: 2rem;
 }
 
 .container {
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -19,10 +29,12 @@ body {
 }
 
 .input-container {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #aeb8fe;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
@@ -37,12 +49,13 @@ body {
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
-  background-color: #ff8600;
+  background-color: #7a698c;
+  color: white;
   transition: all 300ms ease-in-out;
 }
 
 .input-container button:hover {
-  background-color: #e07800;
+  background-color: #473d51;
 }
 
 .input-container input {
@@ -51,4 +64,55 @@ body {
   border-radius: 0.5rem;
   border: none;
   background-color: #f1f2f6;
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  list-style: none;
+  padding: 0.25rem 1.5rem;
+  margin: 0;
+  border-radius: 0.5rem;
+}
+
+.list__item {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.list__item:last-child {
+  border-bottom: none;
+}
+
+.list__item span {
+  font-weight: 500;
+  padding: 0.25rem 1rem 0.25rem 0;
+}
+
+.marked {
+  text-decoration: line-through;
+}
+
+.btn-remove {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #f1796a;
+  transition: all 300ms ease-in-out;
+}
+
+.btn-remove:hover {
+  background-color: #ef6351;
 }
