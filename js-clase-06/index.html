@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <!-- SweetAlert CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.min.css" />
+    <!-- Toastify CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <form id="form">
+            <div class="mb-1">
+              <label for="dni" class="form-label">DNI</label>
+              <input
+                type="number"
+                min="0"
+                class="form-control"
+                id="dni"
+                placeholder="Ingrese su DNI" />
+            </div>
+            <div class="mb-1">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                class="form-control"
+                id="nombre"
+                placeholder="Ingrese su nombre" />
+            </div>
+
+            <div class="mb-1">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input
+                class="form-control"
+                id="apellido"
+                placeholder="Ingrese su apellido" />
+            </div>
+
+            <div class="mb-1">
+              <label for="edad" class="form-label">Fecha de Nacimiento</label>
+              <input
+                class="form-control"
+                id="edad"
+                type="date"
+                placeholder="Ingrese su edad" />
+            </div>
+
+            <div class="mb-1">
+              <label for="genero" class="form-label">Género</label>
+              <select id="genero" class="form-control">
+                <option value="1">Masculino</option>
+                <option value="2">Femenino</option>
+                <option value="3">Otro</option>
+              </select>
+            </div>
+
+            <button class="btn btn-success">Agregar</button>
+          </form>
+        </div>
+        <div class="col-md-6 col-12 mt-2">
+          <div class="mb-3">
+            <input
+              id="buscar"
+              class="form-control"
+              placeholder="Ingrese parametro a buscar" />
+          </div>
+          <table class="table table-striped table-hover table-bordered">
+            <thead>
+              <th>DNI</th>
+              <th>Nombre</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Género</th>
+              <th></th>
+            </thead>
+            <tbody id="table-body">
+              <tr>
+                <td class="text-center" colspan="5">Sin registros</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Toastify CDN -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
